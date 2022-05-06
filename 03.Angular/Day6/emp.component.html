@@ -1,0 +1,42 @@
+<p>emp-component works!</p>
+
+<h3>Perform CRUD operations with remote data in Angular</h3>
+<hr/>
+
+<input type="text"  [(ngModel)]="id"  placeholder="Employee id"  />
+<input type="text"  [(ngModel)]="empname"  placeholder="Employee Name"  />
+<input type="text"  [(ngModel)]="job"  placeholder="Employee job"  />
+<input type="text"  [(ngModel)]="sal"  placeholder="Employee salary"  />
+<input type="text"  [(ngModel)]="deptno"  placeholder="Employee deptno"  />
+
+<br/><br/>
+<input type="button"  value="Get Employee" (click)="getData_click()"  />
+<input type="button"  value="Add Employee" (click)="addData_click()"  />
+<input type="button"  value="Update Employee" (click)="updateData_click()"  />
+<input type="button"  value="Clear Employee" (click)="clearFields()"  />
+<hr/>
+
+<hr/>
+
+<table border="2"   cellspacing="0">
+	<tr>
+	  <th>Employee id</th>
+	  <th>Employee Name</th>
+	  <th>Employee job</th>
+	  <th>Employee salary</th>
+	  <th>Employee deptno</th>
+    <th></th>
+	</tr>
+
+	<tr *ngFor="let item of studentsArray">
+	  <td>{{item.id}}</td>
+	  <td>{{item.empname}}</td>
+	  <td>{{item.job}}</td>
+	  <td>{{item.sal}}</td>
+	  <td>{{item.deptno}}</td>
+    <td align="center">
+      <a href="javascript:void(0);" (click)="selectData_click(item.id)">Select</a> |
+      <a href="javascript:void(0);" (click)="deleteData_click(item.id)">Delete</a>
+    </td>
+	</tr>
+  </table>
