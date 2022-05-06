@@ -1,0 +1,36 @@
+<h1>This is my custom directive</h1>
+
+<style>
+  div{
+      margin: 5px;
+
+  }
+  .shadow
+  {
+   text-shadow: 0 0 3px , 0 0 5px ;
+  }
+   </style>
+
+
+
+<p  appShadowsdirective> Attribute Custom Directive Text </p>    
+<p  [appShadowsdirective]=" 'Blue' "> Attribute Custom Directive Text </p>
+<p  [appShadowsdirective]=" 'Green' "> Attribute Custom Directive Text </p>
+
+
+
+<div *IsAdmin="true">
+  This content is for scott Admin
+</div>
+
+<div   *IsAdmin="true">
+   This content is for Smith Admin
+</div>
+
+<div   *IsAdmin="false">
+   This content is for Sam Admin
+</div>
+
+<div   *IsAdmin="true">
+   This content is for Robert Admin
+</div>
