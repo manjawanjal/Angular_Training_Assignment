@@ -1,0 +1,9 @@
+<p>product-list works!</p>
+
+
+<div>
+		<app-product-list  *ngFor="let item of product-list"
+								[prodObj]="item"
+								(onProductRemoved)="removeProduct($event)">
+		</app-product-list>>
+</div>
